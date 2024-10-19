@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Another plugins' data
+/git_toolbox_blame.xml
+/git_toolbox_prj.xml
+/GitCommitMessageStorage.xml
