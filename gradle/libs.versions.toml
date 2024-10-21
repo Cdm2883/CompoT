@@ -3,6 +3,7 @@ android-gradle-plugin = "8.2.2"
 android-sdk-compile = "34"
 compose-plugin = "1.6.11"
 kotlin = "2.0.20"
+adamko-dokkatoo = "2.4.0"
 
 junit = "4.13.2"
 
@@ -18,3 +19,4 @@ jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugi
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+adamko-dokkatoo-html = { id = "dev.adamko.dokkatoo-html", version.ref = "adamko-dokkatoo" }

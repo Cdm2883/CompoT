@@ -30,6 +30,10 @@ dependencyResolutionManagement {
     }
 }
 
+listOf("api", "std").forEach {
+    val path = ":compot-terminal:$it"
+    include(path)
+    project(path).name = "compot-terminal-$it"
+}
 include(":compot-chalk")
-include(":compot-terminal:api", ":compot-terminal:std")
 include(":compot-ui")

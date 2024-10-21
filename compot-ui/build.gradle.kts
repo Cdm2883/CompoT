@@ -56,7 +56,7 @@ kotlin {
 
     sourceSets.commonMain.dependencies {
         implementation(compose.runtime)
-        implementation(projects.compotTerminal.api)
+        implementation(projects.compotTerminal.compotTerminalApi)
     }
 }
 
