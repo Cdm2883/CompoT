@@ -21,7 +21,7 @@ kotlin {
             implementation(libs.jline.terminal.jni)
         }
         jsMain.dependencies {
-            compileOnly(libs.kotlin.js.wrapper.node)
+            implementation(libs.kotlin.js.wrapper.node)
         }
 
         val macosX64Main by getting
