@@ -10,6 +10,10 @@ plugins {
     alias(libs.plugins.adamko.dokkatoo.html)
 }
 
+subprojects {
+    plugins.apply(rootProject.libs.plugins.adamko.dokkatoo.html.get().pluginId)
+}
+
 dependencies {
     dokkatoo(projects.compotTerminal.compotTerminalApi)
     dokkatoo(projects.compotTerminal.compotTerminalStd)
