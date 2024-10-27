@@ -5,9 +5,15 @@ compose-plugin = "1.6.11"
 kotlin = "2.0.20"
 adamko-dokkatoo = "2.4.0"
 
+jline = "3.26.3"
+kotlin-js-wrapper-node = "22.5.4-pre.820"
+
 junit = "4.13.2"
 
 [libraries]
+jline-terminal-jni = { module = "org.jline:jline-terminal-jni", version.ref = "jline" }
+kotlin-js-wrapper-node = { module = "org.jetbrains.kotlin-wrappers:kotlin-node", version.ref = "kotlin-js-wrapper-node" }
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
