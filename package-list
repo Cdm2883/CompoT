@@ -3,3 +3,5 @@ $dokka.linkExtension:html
 
 module:compot-terminal-api
 vip.cdms.compot.terminal.api
+module:compot-terminal-std
+vip.cdms.compot.terminal.std
