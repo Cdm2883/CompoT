@@ -5,6 +5,7 @@ import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
 import kotlinx.cinterop.ptr
 import platform.windows.*
+import vip.cdms.compot.terminal.api.SignalEmitter
 
 @OptIn(ExperimentalForeignApi::class)
 fun getConsoleScreenBufferInfo(): CONSOLE_SCREEN_BUFFER_INFO {
@@ -23,4 +24,8 @@ actual fun getTerminalWidth0() = getConsoleScreenBufferInfo().run {
 
 actual fun getTerminalHeight0() = getConsoleScreenBufferInfo().run {
     srWindow.Bottom - srWindow.Top + 1
+}
+
+internal actual fun initStandardSignalHandler(signal: SignalEmitter) {
+    TODO("Wait for IO Impl")
 }

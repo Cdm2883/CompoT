@@ -8,7 +8,7 @@ object StandardTerminal : Terminal {
     override val height
         get() = getTerminalHeight0()
 
-    override val signal = SignalEmitter()
+    override val signal = SignalEmitter().apply(::initStandardSignalHandler)
     override val io = StandardIO
     override val focus = StandardFocus
     override val mouse = StandardMouse
@@ -19,3 +19,5 @@ object StandardTerminal : Terminal {
 
 expect fun getTerminalWidth0(): Int
 expect fun getTerminalHeight0(): Int
+
+internal expect fun initStandardSignalHandler(signal: SignalEmitter)
