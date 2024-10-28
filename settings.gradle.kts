@@ -37,3 +37,9 @@ listOf("api", "std").forEach {
 }
 include(":compot-chalk")
 include(":compot-ui")
+
+listOf(
+    "showcase",
+    "terminal-android",
+    "terminal-web",
+).forEach { include(":examples:$it") }

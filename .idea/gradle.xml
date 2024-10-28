@@ -13,6 +13,10 @@
             <option value="$PROJECT_DIR$/compot-terminal/api" />
             <option value="$PROJECT_DIR$/compot-terminal/std" />
             <option value="$PROJECT_DIR$/compot-ui" />
+            <option value="$PROJECT_DIR$/examples" />
+            <option value="$PROJECT_DIR$/examples/showcase" />
+            <option value="$PROJECT_DIR$/examples/terminal-android" />
+            <option value="$PROJECT_DIR$/examples/terminal-web" />
           </set>
         </option>
       </GradleProjectSettings>

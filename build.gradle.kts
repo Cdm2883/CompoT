@@ -11,7 +11,8 @@ plugins {
 }
 
 subprojects {
-    plugins.apply(rootProject.libs.plugins.adamko.dokkatoo.html.get().pluginId)
+    if (project.parent?.name != "examples")
+        plugins.apply(rootProject.libs.plugins.adamko.dokkatoo.html.get().pluginId)
 }
 
 dependencies {
