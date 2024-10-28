@@ -19,7 +19,7 @@ interface SignalBus {
 class SignalEmitter : SignalBus {
     val listeners = mutableListOf<(signal: Signal) -> Unit>()
 
-    fun emit(signal: Signal) = listeners.forEach { it(signal) }
+    fun raise(signal: Signal) = listeners.forEach { it(signal) }
 
     override fun handle(signal: Signal, callback: () -> Unit) {
         listeners += { if (it == signal) callback() }
