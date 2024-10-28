@@ -1,20 +1,22 @@
 package vip.cdms.compot.terminal.api
 
-enum class Signal {
-    INT,
-    QUIT,
-    TSTP,
-    CONT,
-    INFO,
-    WINCH
-}
+typealias Signal = SignalBus.Signal
 
-interface SignalRegistrar {
+interface SignalBus {
+    enum class Signal {
+        INT,
+        QUIT,
+        TSTP,
+        CONT,
+        INFO,
+        WINCH
+    }
+
     fun handle(signal: Signal, callback: () -> Unit)
 }
 
 // Kotlin Flow is not supported for **ALL** targets
-class SignalEmitter : SignalRegistrar {
+class SignalEmitter : SignalBus {
     val listeners = mutableListOf<(signal: Signal) -> Unit>()
 
     fun emit(signal: Signal) = listeners.forEach { it(signal) }

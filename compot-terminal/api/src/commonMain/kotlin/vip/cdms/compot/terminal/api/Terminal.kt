@@ -4,7 +4,7 @@ interface Terminal {
     val width: Int
     val height: Int
 
-    val signal: SignalRegistrar
+    val signal: SignalBus
     val io: InputOutput
     val focus: FocusTracking
     val mouse: MouseManager
