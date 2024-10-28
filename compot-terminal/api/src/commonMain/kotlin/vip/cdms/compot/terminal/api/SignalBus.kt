@@ -4,11 +4,32 @@ typealias Signal = SignalBus.Signal
 
 interface SignalBus {
     enum class Signal {
+        /**
+         * **Interrupt signal**, usually triggered by pressing `Ctrl+C`.
+         * This signal is commonly used to safely terminate the current process.
+         */
         INT,
+
+        /**
+         * **Quit signal**, typically triggered by pressing `Ctrl+\`.
+         * Requests the immediate termination of the process, potentially creating a core dump for debugging purposes.
+         */
         QUIT,
+
+        /**
+         * **Terminal stop signal**, generally triggered by pressing `Ctrl+Z`.
+         * Suspends (pauses) the current process, which can be resumed later.
+         */
         TSTP,
+
+        /**
+         * **Continue signal**. Used to resume a process that was previously suspended by a TSTP signal.
+         */
         CONT,
-        INFO,
+
+        /**
+         * **Window change signal**. Sent by the terminal when the window size changes,
+         */
         WINCH
     }
 
