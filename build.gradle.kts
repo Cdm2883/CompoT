@@ -21,3 +21,23 @@ dependencies {
     dokkatoo(projects.compotChalk)
     dokkatoo(projects.compotUi)
 }
+
+//language=JavaScript
+val dokkaInjectJs = """
+    document.querySelectorAll(".platform-tag.common-like").forEach(tag => {
+        const platform = tag.innerText.toLowerCase()
+        if (platform.includes("unix")) {
+            tag.classList.remove("common-like")
+            tag.classList.add("native-like")
+        }
+    })
+""".trimIndent()
+tasks.register("generateKDoc") {
+    group = "dokkatoo"
+    dependsOn(tasks.dokkatooGenerate)
+    doLast {
+        layout.buildDirectory
+            .file("dokka/html/scripts/navigation-loader.js")
+            .get().asFile.appendText(dokkaInjectJs)
+    }
+}
