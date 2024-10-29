@@ -93,3 +93,10 @@ if (document.readyState == 'loading') {
 } else {
     displayNavigationFromPage()
 }
+document.querySelectorAll(".platform-tag.common-like").forEach(tag => {
+    const platform = tag.innerText.toLowerCase()
+    if (platform.includes("unix")) {
+        tag.classList.remove("common-like")
+        tag.classList.add("native-like")
+    }
+})
